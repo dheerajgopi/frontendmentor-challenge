@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* normalize */
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/* basic elements */
+
+h1, h2 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+}
+
+p, li {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}
+
+button {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* shadows */
+
+.shadow {
+    box-shadow: 3px 3px 14px 4px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 3px 3px 14px 4px rgba(0,0,0,0.26);
+    -moz-box-shadow: 3px 3px 14px 4px rgba(0,0,0,0.26);
+}
+
+/* background colours */
+
+.bknd-darker-cyan {
+    background-color: rgb(0, 185, 178)
+}
+
+.bknd-dark-cyan {
+    background-color: rgb(19, 196, 190);
+}
+
+.bknd-yellowish-green {
+    background-color: rgb(172, 241, 0);
+}
+
+/* font colours */
+
+.fnt-darker-cyan {
+    color: rgb(0, 185, 178)
+}
+
+.fnt-yellowish-green {
+    color: rgb(172, 241, 0);
+}
+
+.fnt-white {
+    color: white;
+}
+
+.fnt-light-grey {
+    color: hsl(204, 43%, 93%);
+}
+
+.fnt-french-grey {
+    color: rgb(178, 184, 196);
+}
+
+/* custom */
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.top-section {
+    background-color: white;
+    padding: 30px;
+    flex-grow: 1;
+    flex: 1 100%;
+}
+
+.bottom-section {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.top-section h1 {
+    margin-bottom: 30px;
+}
+
+.size-subscription-cost {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.subscription-cost > span {
+    vertical-align: middle;
+}
+
+.btn-sign-up {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    margin: 0 auto;
+    width: 240px;
+}
