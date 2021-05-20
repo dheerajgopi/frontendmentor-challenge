@@ -29,15 +29,6 @@ button {
     font-size: 1em;
 }
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
 /* shadows */
 
 .shadow {
@@ -58,6 +49,10 @@ button {
 
 .bknd-yellowish-green {
     background-color: rgb(172, 241, 0);
+}
+
+.bknd-bluish-grey {
+    background-color: rgb(230, 238, 247);
 }
 
 /* font colours */
@@ -83,11 +78,25 @@ button {
 }
 
 /* custom */
+.splash-gut {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 760px;
+    max-width: 100%;
+    height: 525px;
+    max-height: 100%;
+    padding: 20px;
+}
 
-.main-container {
+.splash {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: fixed;
+    padding: 20px;
+
 }
 
 .top-section {
@@ -122,4 +131,13 @@ button {
     height: 45px;
     margin: 0 auto;
     width: 240px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
