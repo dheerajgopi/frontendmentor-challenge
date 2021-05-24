@@ -1,0 +1,19 @@
+{
+  "name": "single-price-grid-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dheeraj Gopinath",
+  "license": "ISC",
+  "engines": {
+    "node": "14.x"
+  }
+}
