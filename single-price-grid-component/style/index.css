@@ -18,9 +18,14 @@ h1, h2 {
     font-weight: 700;
 }
 
+ul {
+    padding: 0;
+}
+
 p, li {
     font-family: 'Karla', sans-serif;
     font-weight: 400;
+    list-style-type: none;
 }
 
 button {
@@ -77,12 +82,32 @@ button {
     color: rgb(178, 184, 196);
 }
 
+/* font sizes */
+
+.top-section > p {
+    font-size: 1.1rem;
+}
+
+.bottom-section > p {
+    font-size: 1.1rem;
+}
+
 /* custom */
-.splash-gut {
+
+.centered {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.splash-gut {
     width: 760px;
     max-width: 100%;
     height: 525px;
@@ -91,24 +116,52 @@ button {
 }
 
 .splash {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     position: fixed;
     padding: 20px;
-
 }
 
 .top-section {
     background-color: white;
-    padding: 30px;
+    padding: 30px 40px;
     flex-grow: 1;
     flex: 1 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.top-section > p {
+    line-height: 1.5;
 }
 
 .bottom-section {
     flex-grow: 1;
-    padding: 30px;
+    flex-basis: 0;
+    padding: 30px 40px 40px 40px;
+}
+
+.bottom-left-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bottom-left-item > p {
+    margin: 5px;
+}
+
+@media (orientation: landscape) {
+    .bottom-left-item {
+        border-radius: 0 0 0 10px;
+    }
+
+    .bottom-right-item {
+        border-radius: 0 0 10px 0;
+    }
+}
+
+@media (orientation: portrait) {
+    .bottom-right-item {
+        border-radius: 0 0 10px 10px;
+    }
 }
 
 .top-section h1 {
@@ -124,20 +177,20 @@ button {
     vertical-align: middle;
 }
 
-.btn-sign-up {
+#btn-sign-up {
     display: inline-block;
     border: none;
     border-radius: 5px;
     height: 45px;
     margin: 0 auto;
-    width: 240px;
+    width: 100%;
+    margin-top: auto; /* align item to bottom */
 }
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
+#why-us {
+    display: table-cell; /* align list items to bottom */
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+#why-us > li {
+    line-height: 1.5;
 }
