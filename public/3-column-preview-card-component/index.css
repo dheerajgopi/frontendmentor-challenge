@@ -102,15 +102,49 @@ button {
     flex: 1 33.33%;
     display: flex;
     flex-flow: column nowrap;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .car-type-name {
     font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.2rem;
+    text-transform: uppercase;
 }
 
 .car-type-description {
+    display: flex;
     font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.btn-learn-more {
+    height: 3rem;
+    width: 65%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9rem;
+    border-radius: 50vh;
+}
+
+#img-sedan {
+    width: 5rem;
+    height: 3rem;
+    background: url(images/icon-sedans.svg);
+    background-repeat: no-repeat;
+}
+
+#img-suv {
+    width: 5rem;
+    height: 3rem;
+    background: url(images/icon-suvs.svg);
+    background-repeat: no-repeat;
+}
+
+#img-luxury {
+    width: 5rem;
+    height: 3rem;
+    background: url(images/icon-luxury.svg);
+    background-repeat: no-repeat;
 }
 
 /* footer */
