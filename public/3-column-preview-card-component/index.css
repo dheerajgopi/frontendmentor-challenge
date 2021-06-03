@@ -19,6 +19,20 @@ body {
     height: 100%;
 }
 
+/* background colours */
+
+.clr-bg-bright-orange {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.clr-bg-dark-cyan {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.clr-bg-v-dark-cyan {
+    background-color: hsl(179, 100%, 13%);
+}
+
 /* font colours */
 
 .clr-fnt-white {
