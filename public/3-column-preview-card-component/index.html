@@ -9,32 +9,33 @@
 
   <title>Frontend Mentor | 3-column preview card component</title>
 </head>
-<body>
-  <div class="main">
-    <section class="sedan clr-bg-bright-orange">
-      <h1 class="car-type">Sedans</h1>
-      <p class="car-description">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
-        or on your next road trip.</p>
-      <button>Learn More</button>
-    </section>
+<body class="clr-bg-vl-gray">
+  <div id="main-wrapper">
+    <div id="content-wrapper">
+      <section id="sedan" class="clr-bg-bright-orange car-type">
+        <h1 class="car-type-name flex-no-grow clr-vl-gray">Sedans</h1>
+        <p class="car-type-description flex-stretch clr-white-75">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+          or on your next road trip.</p>
+        <button class="btn-learn-more flex-no-grow clr-bg-vl-gray clr-bright-orange">Learn More</button>
+      </section>
 
-    <section class="suv clr-bg-dark-cyan">
-      <h1 class="car-type">SUVs</h1>
-      <p class="car-description">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
-        and off-road adventures.</p>
-      <button>Learn More</button>
-    </section>
+      <section id="suv" class="clr-bg-dark-cyan car-type">
+        <h1 class="car-type-name flex-no-grow clr-vl-gray">SUVs</h1>
+        <p class="car-type-description flex-stretch clr-white-75">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+          and off-road adventures.</p>
+        <button class="btn-learn-more flex-no-grow clr-bg-vl-gray clr-dark-cyan">Learn More</button>
+      </section>
 
-    <section class="luxury clr-bg-v-dark-cyan">
-      <h1 class="car-type">Luxury</h1>
-      <p class="car-description">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
-        rental and arrive in style.</p>
-      <button>Learn More</button>
-    </section>
+      <section id="luxury" class="clr-bg-v-dark-cyan car-type">
+        <h1 class="car-type-name flex-no-grow clr-vl-gray">Luxury</h1>
+        <p class="car-type-description flex-stretch clr-white-75">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+          rental and arrive in style.</p>
+        <button class="btn-learn-more flex-no-grow clr-bg-vl-gray clr-v-dark-cyan">Learn More</button>
+      </section>
+    </div>
   </div>
 
-
-  <div class="attribution clr-fnt-white">
+  <div class="attribution">
     Challenge by: <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by: <a href="https://github.com/dheerajgopi" target="_blank">Dheeraj Gopinath</a>.
   </div>
