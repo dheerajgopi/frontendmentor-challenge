@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* normalize */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-size: 15px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* background colours */
+
+.clr-bg-vl-gray {
+    background-color: hsl(0, 0%, 95%);
+}
+
+.clr-bg-bright-orange {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.clr-bg-dark-cyan {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.clr-bg-v-dark-cyan {
+    background-color: hsl(179, 100%, 13%);
+}
+
+/* colours */
+
+.clr-vl-gray {
+    color: hsl(0, 0%, 95%);
+}
+
+.clr-white-75 {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.clr-bright-orange {
+    color: hsl(31, 77%, 52%);
+}
+
+.clr-dark-cyan {
+    color: hsl(184, 100%, 22%);
+}
+
+.clr-v-dark-cyan {
+    color: hsl(179, 100%, 13%);
+}
+
+/* helpers */
+
+.flex-stretch {
+    flex: 1;
+}
+
+.flex-no-grow {
+    flex-grow: 0;
+}
+
+/* basic layout */
+
+#main-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#splash-round-corner {
+    display: flex;
+    padding: 10% 18% 10% 18%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+}
+
+#content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (orientation: portrait) {
+    #splash-round-corner {
+        padding: 10% 6% 10% 6%;
+    }
+
+    #content-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* card layout */
+
+.car-type {
+    flex: 1 33.33%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 3rem;
+}
+
+.car-type-name {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    padding-top: 2.2rem;
+}
+
+.car-type-description {
+    display: flex;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1rem;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    line-height: 1.5rem;
+}
+
+.btn-learn-more {
+    height: 3rem;
+    width: 65%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 50vh;
+    border-style: solid;
+    border-color: hsl(0, 0%, 95%);
+}
+
+.btn-learn-more:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
+#img-sedan {
+    width: 5rem;
+    height: 3rem;
+    background: url(images/icon-sedans.svg);
+    background-repeat: no-repeat;
+}
+
+#img-suv {
+    width: 5rem;
+    height: 3rem;
+    background: url(images/icon-suvs.svg);
+    background-repeat: no-repeat;
+}
+
+#img-luxury {
+    width: 5rem;
+    height: 3rem;
+    background: url(images/icon-luxury.svg);
+    background-repeat: no-repeat;
+}
+
+@media (orientation: portrait) {
+    .car-type {
+        flex: 1
+    }
+
+    .car-type-name, .car-type-description {
+        padding-top: 1.5rem;
+    }
+
+    .car-type-description {
+        padding-bottom: 1.5rem;
+    }
+}
+
+/* footer */
+
+.attribution {
+    font-size: 0.9rem; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
