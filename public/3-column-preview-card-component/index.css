@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
 
 /* normalize */
@@ -84,13 +84,27 @@ button {
     flex-grow: 1;
 }
 
-#content-wrapper {
+#splash-round-corner {
     display: flex;
-    padding: 10% 20% 10% 20%;
+    padding: 10% 18% 10% 18%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+}
+
+#content-wrapper {
+    height: 100%;
+    display: flex;
     flex-flow: row wrap;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 @media (orientation: portrait) {
+    #splash-round-corner {
+        padding: 10% 6% 10% 6%;
+    }
+
     #content-wrapper {
         flex-direction: column;
     }
@@ -109,21 +123,33 @@ button {
     font-family: 'Big Shoulders Display', cursive;
     font-size: 2.2rem;
     text-transform: uppercase;
+    padding-top: 2.2rem;
 }
 
 .car-type-description {
     display: flex;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 0.9rem;
-    align-items: center;
+    font-size: 1rem;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    line-height: 1.5rem;
 }
 
 .btn-learn-more {
     height: 3rem;
     width: 65%;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 400;
     border-radius: 50vh;
+    border-style: solid;
+    border-color: hsl(0, 0%, 95%);
+}
+
+.btn-learn-more:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+    cursor: pointer;
 }
 
 #img-sedan {
@@ -145,6 +171,20 @@ button {
     height: 3rem;
     background: url(images/icon-luxury.svg);
     background-repeat: no-repeat;
+}
+
+@media (orientation: portrait) {
+    .car-type {
+        flex: 1
+    }
+
+    .car-type-name, .car-type-description {
+        padding-top: 1.5rem;
+    }
+
+    .car-type-description {
+        padding-bottom: 1.5rem;
+    }
 }
 
 /* footer */
