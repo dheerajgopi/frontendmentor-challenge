@@ -13,6 +13,25 @@ html, body {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* profile card */
+
+.profile-card {
+    width: 350px;
+    height: 375px;
+    border-style: solid;
+    border-color: black;
+}
+
+/* footer */
 
 .attribution {
     font-size: 0.8rem;
