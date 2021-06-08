@@ -8,17 +8,66 @@
     margin: 0;
 }
 
+/* basic elements */
+
 html, body {
     font-size: 12px;
     font-family: 'Kumbh Sans', sans-serif;
 }
 
 body {
+    position: relative;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+}
+
+/* basic layout */
+
+.main-container {
+    width: 73rem;
+    height: 42rem;
+}
+
+#faq-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 20px;
+    border-color: black;
+    background-color: white;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+#faq-wrapper h1 {
+    text-align: center;
+}
+
+.faq-item {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-container {
+        padding: 10rem 0 5rem 0;
+        width: 28rem;
+        height: 55rem;
+    }
+
+    .faq-item {
+        margin: 2rem;
+    }
 }
 
 .attribution {
+    position: relative;
+    bottom: -5rem;
     font-size: 11px;
     text-align: center;
 }
