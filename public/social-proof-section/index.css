@@ -50,7 +50,7 @@ p {
     height: 100%;
     width: 100%;
     flex: 1 100%;
-    padding: 5rem 2rem;
+    padding: 5rem 1.5rem;
 }
 
 @media only screen and (min-width: 800px) {
@@ -63,7 +63,7 @@ p {
         grid-template-areas:
           "heading reviews"
           "testimonials testimonials";
-        padding: 5rem 7rem;
+        padding: 7rem 10rem;
       }
 
     .heading {
@@ -78,6 +78,86 @@ p {
         grid-area: reviews;
     }
 
+}
+
+/* testimonials */
+
+.profile-pic {
+    border-radius: 50%;
+    width: 2.2rem;
+}
+
+.testimonials {
+    padding-top: 2rem;
+}
+
+.testimonial-user {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 1.2rem;
+}
+
+.testimonials .testimonial-item {
+    margin-bottom: 1.5rem;
+}
+
+.testimonials .testimonial-item:last-child {
+    margin-bottom: 0;
+}
+
+.testimonial-item {
+    padding: 3rem 1.5rem;
+    background-color: var(--very-dark-magenta);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.user-name, .testimonial-content {
+    color: white;
+}
+
+.user-name, .account-type, .testimonial-content {
+    font-size: 0.9rem;
+}
+
+.testimonial-content {
+    padding-top: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.account-type {
+    font-weight: 500;
+    color: var(--soft-pink);
+}
+
+@media only screen and (min-width: 800px) {
+    .testimonials {
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 0;
+    }
+
+    .testimonial-item {
+        flex: 1 33.33%;
+        height: max-content;
+    }
+
+    .testimonials .testimonial-item {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+
+    .testimonials .testimonial-item:last-child {
+        margin-right: 0;
+    }
+
+    .y-offset-s {
+        transform: translateY(1rem);
+    }
+
+    .y-offset-m {
+        transform: translateY(2rem);
+    }
 }
 
 /* footer */
