@@ -33,6 +33,9 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    background: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
 }
 
 h1 {
@@ -54,6 +57,12 @@ p {
 }
 
 @media only screen and (min-width: 800px) {
+    body {
+        background: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+    }
+
     h1 {
         font-size: 3rem;
         line-height: 3rem;
