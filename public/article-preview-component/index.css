@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
 
+:root {
+    --light-greyish-blue: hsl(210, 46%, 95%);
+}
+
 
 /* normalize */
 
@@ -14,17 +18,60 @@ h1 {
     margin: 0;
 }
 
-/* basic elements */
+/* basic layout */
 
 html, body {
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
 }
 
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-greyish-blue);
+}
+
+main {
+    max-height: 48rem;
+    flex: 1 70%;
+    overflow: hidden;
+    padding: 0 1.5rem;
+}
+
 /* card */
 
+.article-card {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .article-image {
+    flex: 1 35%;
     background: url(images/drawers.jpg);
+    background-size: cover;
+}
+
+.article-content {
+    flex: 1 65%;
+    padding: 2.5rem 2rem 1.5rem 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        max-height: 24rem;
+        max-width: 73rem;
+    }
+    .article-card {
+        flex-flow: row nowrap;
+    }
 }
 
 /* footer */
