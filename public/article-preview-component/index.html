@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
 
   <title>Frontend Mentor | Article preview component</title>
 </head>
@@ -14,16 +15,20 @@
     <article class="article-card">
       <div class="article-image"></div>
       <section class="article-content">
-        <h2>Shift the overall look and feel by adding these wonderful
+        <h2 class="heading">Shift the overall look and feel by adding these wonderful
           touches to furniture in your home</h2>
-        <p>Ever been in a room and felt like something was missing? Perhaps
+        <p class="summary">Ever been in a room and felt like something was missing? Perhaps
           it felt slightly bare and uninviting. I’ve got some simple tips
           to help you make any room feel complete.</p>
-        <div>
-          <p>Michelle Appleton</p>
-          <p>28 Jun 2020</p>
-          <button>Share</button>
+        <div class="content-footer">
+          <img src="images/avatar-michelle.jpg" alt="author avatar" id="avatar">
+          <div id="author-details">
+            <p class="author">Michelle Appleton</p>
+            <p class="date">28 Jun 2020</p>
+          </div>
+          <button id="btn-share"></button>
         </div>
+        <div id="share-options"></div>
       </section>
     </article>
   </main>

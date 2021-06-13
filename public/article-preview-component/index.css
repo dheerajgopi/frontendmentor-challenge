@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
 
 :root {
+    --very-dark-greyish-blue: hsl(217, 19%, 35%);
     --light-greyish-blue: hsl(210, 46%, 95%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --greyish-blue: hsl(212, 23%, 69%);
 }
 
 
@@ -36,10 +39,17 @@ body {
 }
 
 main {
-    max-height: 48rem;
-    flex: 1 70%;
+    position: relative;
+    height: 43rem;
     overflow: hidden;
-    padding: 0 1.5rem;
+    padding: 0 1.8rem;
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        max-height: 24rem;
+        max-width: 65rem;
+    }
 }
 
 /* card */
@@ -54,24 +64,96 @@ main {
 }
 
 .article-image {
-    flex: 1 35%;
+    flex: 1 40%;
     background: url(images/drawers.jpg);
     background-size: cover;
 }
 
 .article-content {
-    flex: 1 65%;
-    padding: 2.5rem 2rem 1.5rem 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 60%;
+    padding: 2.5rem 2.5rem 1.75rem 2.5rem;
+}
+
+.heading {
+    color: var(--very-dark-greyish-blue);
+    font-size: 1.25rem;
+}
+
+.summary {
+    padding-top: 1.5rem;
+    color: var(--desaturated-dark-blue);
+    line-height: 1.75rem;
+    font-size: 1.05rem;
+}
+
+.content-footer {
+    margin-top: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+#author-details {
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+.author {
+    color: var(--very-dark-greyish-blue);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+#avatar {
+    border-radius: 50%;
+    width: 3.2rem;
+}
+
+.date {
+    color: var(--greyish-blue);
+    font-size: 1.1rem;
+}
+
+#btn-share {
+    display: inline;
+    margin-left: auto;
+    border: none;
+    border-radius: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: var(--light-greyish-blue);
+    background-image: url(images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 @media only screen and (min-width: 800px) {
-    main {
-        max-height: 24rem;
-        max-width: 73rem;
-    }
     .article-card {
         flex-flow: row nowrap;
     }
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .summary {
+        font-size: 1.1rem;
+    }
+
+    .article-content {
+        padding-bottom: 2rem;
+    }
+}
+
+/* share */
+
+#share-options {
+    display: none;
+    background-color: aqua;
+    height: 4rem;
+    width: 100%;
 }
 
 /* footer */
