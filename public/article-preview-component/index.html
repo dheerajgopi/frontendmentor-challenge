@@ -6,7 +6,6 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script>
 
   <title>Frontend Mentor | Article preview component</title>
 </head>
@@ -26,16 +25,23 @@
             <p class="author">Michelle Appleton</p>
             <p class="date">28 Jun 2020</p>
           </div>
-          <button id="btn-share"></button>
+          <button class="btn-share" onclick="displayPopup()"></button>
         </div>
-        <div id="share-options"></div>
       </section>
+      <div id="share-footer">
+        <span class="share-text">SHARE</span>
+        <a href="#"><img src="images/icon-facebook.svg" alt="facebook share" class="social-media-icon"></a>
+        <a href="#"><img src="images/icon-twitter.svg" alt="twitter share" class="social-media-icon"></a>
+        <a href="#"><img src="images/icon-pinterest.svg" alt="pinterest share" class="social-media-icon"></a>
+        <button class="btn-share" onclick="displayPopup()"></button>
+      </div>
     </article>
   </main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/dheerajgopi" target="_blank">Dheeraj Gopinath</a>.
   </div>
+  <script src="index.js"></script>
 </body>
 </html>

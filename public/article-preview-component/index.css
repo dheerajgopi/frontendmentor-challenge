@@ -7,7 +7,6 @@
     --greyish-blue: hsl(212, 23%, 69%);
 }
 
-
 /* normalize */
 
 * {
@@ -49,6 +48,7 @@ main {
     main {
         max-height: 24rem;
         max-width: 65rem;
+        overflow: visible;
     }
 }
 
@@ -64,7 +64,7 @@ main {
 }
 
 .article-image {
-    flex: 1 40%;
+    flex: 1 0 40%;
     background: url(images/drawers.jpg);
     background-size: cover;
 }
@@ -116,8 +116,9 @@ main {
     font-size: 1.1rem;
 }
 
-#btn-share {
+.btn-share {
     display: inline;
+    align-self: center;
     margin-left: auto;
     border: none;
     border-radius: 50%;
@@ -127,11 +128,16 @@ main {
     background-image: url(images/icon-share.svg);
     background-repeat: no-repeat;
     background-position: center center;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 800px) {
     .article-card {
         flex-flow: row nowrap;
+        overflow: hidden;
+        box-shadow: 36px 21px 100px 0px rgba(0,0,0,0.14);
+        -webkit-box-shadow: 36px 21px 100px 0px rgba(0,0,0,0.14);
+        -moz-box-shadow: 36px 21px 100px 0px rgba(0,0,0,0.14);
     }
 
     .heading {
@@ -149,20 +155,78 @@ main {
 
 /* share */
 
-#share-options {
-    display: none;
-    background-color: aqua;
-    height: 4rem;
+#share-footer {
+    flex-flow: row nowrap;
+    height: 7rem;
+    bottom: 0;
     width: 100%;
+    display: none;
+    align-items: center;
+    padding: 0 2.5rem;
+    background-color: var(--very-dark-greyish-blue);
+}
+
+@media only screen and (min-width: 800px) {
+    #share-footer {
+        position: absolute;
+        right: -4rem;
+        bottom: 7.5rem;
+        width: auto;
+        height: 4.5rem;
+        border-radius: 10px;
+    }
+
+    #share-footer .btn-share {
+        display: none;
+    }
+
+    /* triangle for popup using css border trick */
+
+    #share-footer::after {
+        content: '';
+        position: absolute;
+        bottom: -1.25rem;
+        left: 43%;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid var(--very-dark-greyish-blue);
+    }
+}
+
+.share-text {
+    color: var(--greyish-blue);
+    font-size: 0.9rem;
+    letter-spacing: .60rem;
+    text-transform: uppercase;
+}
+
+.social-media-icon {
+    padding: 0 0.7rem;
 }
 
 /* footer */
 
 .attribution {
+    position: absolute;
     font-size: 11px;
     text-align: center;
+    bottom: 0;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* helpers */
+
+.card-footer-invisible {
+    display: none;
+}
+
+@media only screen and (min-width: 800px) {
+    .card-footer-flex-desktop {
+        display: flex;
+    }
 }
