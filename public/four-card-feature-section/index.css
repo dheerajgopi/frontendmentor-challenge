@@ -5,10 +5,100 @@ html, body {
     font-size: 15px;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* basic layout */
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem 1rem 2rem;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    flex: 1 100%;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.heading {
+    flex: 1 20%;
+}
+
+.feature-cards {
+    flex: 1 80%;
+}
+
+.card {
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 4px 10px 33px 0px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 4px 10px 33px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 4px 10px 33px 0px rgba(0,0,0,0.33);
+}
+
+.feature-cards .card:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+/* basic layout - desktop */
+
+@media only screen and (min-width: 1000px) {
+    body {
+        padding: 5rem 10rem 2rem 10rem;
+    }
+
+    .feature-cards .card:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .feature-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0 1rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "card-col-1 card-col-2-row-1 card-col-3"
+          "card-col-1 card-col-2-row-2 card-col-3";
+        align-items: center;
+    }
+
+    .card-col-1 {
+        grid-area: card-col-1;
+    }
+
+    .card-col-2-row-1 {
+        grid-area: card-col-2-row-1;
+    }
+
+    .card-col-2-row-2 {
+        grid-area: card-col-2-row-2;
+    }
+
+    .card-col-3 {
+        grid-area: card-col-3;
+    }
+}
+
 /* footer */
 
 .attribution {
-    font-size: 11px;
+    padding: 1rem;
+    font-size: 1rem;
     text-align: center;
 }
 
