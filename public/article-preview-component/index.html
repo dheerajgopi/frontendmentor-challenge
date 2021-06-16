@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+
+  <title>Frontend Mentor | Article preview component</title>
+</head>
+<body>
+  <main>
+    <article class="article-card">
+      <div class="article-image"></div>
+      <section class="article-content">
+        <h2 class="heading">Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home</h2>
+        <p class="summary">Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.</p>
+        <div class="content-footer">
+          <img src="images/avatar-michelle.jpg" alt="author avatar" id="avatar">
+          <div id="author-details">
+            <p class="author">Michelle Appleton</p>
+            <p class="date">28 Jun 2020</p>
+          </div>
+          <button class="btn-share" onclick="displayPopup()"></button>
+        </div>
+      </section>
+      <div id="share-footer">
+        <span class="share-text">SHARE</span>
+        <a href="#"><img src="images/icon-facebook.svg" alt="facebook share" class="social-media-icon"></a>
+        <a href="#"><img src="images/icon-twitter.svg" alt="twitter share" class="social-media-icon"></a>
+        <a href="#"><img src="images/icon-pinterest.svg" alt="pinterest share" class="social-media-icon"></a>
+        <button class="btn-share" onclick="displayPopup()"></button>
+      </div>
+    </article>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/dheerajgopi" target="_blank">Dheeraj Gopinath</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
