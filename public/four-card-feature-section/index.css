@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+    --clr-very-dark-blue: hsl(234, 12%, 34%);
+    --clr-grayish-blue: hsl(229, 6%, 66%);
+    --clr-very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* basic elements */
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--clr-very-dark-blue);
+}
+
+h2 {
+    color: var(--clr-very-dark-blue);
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--clr-grayish-blue);
+}
+
+@media only screen and (min-width: 1000px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+/* text */
+
+.thin-heading {
+    font-weight: 200;
+}
+
+.heading-summary {
+    text-align: center;
+    margin-top: 0.7rem;
+}
+
+.card-content {
+    font-size: 0.85rem;
+}
+
+@media only screen and (min-width: 1000px) {
+    .card-content {
+        font-size: 0.9rem;
+    }
+}
+
+/* basic layout */
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem 5rem 2rem;
+    background-color: var(--clr-very-light-gray);
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    flex: 1 100%;
+    width: 100%;
+}
+
+.heading {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 20%;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.feature-cards {
+    flex: 1 80%;
+    padding-top: 4rem;
+}
+
+.card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 10px 10px 33px 0px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 10px 10px 33px 0px rgba(0,0,0,0.20);
+    -moz-box-shadow: 10px 10px 33px 0px rgba(0,0,0,0.20);
+}
+
+.feature-cards .card:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+/* basic layout - desktop */
+
+@media only screen and (min-width: 1000px) {
+    body {
+        padding: 5rem 11rem 5rem 11rem;
+    }
+
+    main {
+        align-items: center;
+    }
+
+    .heading {
+        width: 50%;
+    }
+
+    .feature-cards .card:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .feature-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem 2rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "card-col-1 card-col-2-row-1 card-col-3"
+          "card-col-1 card-col-2-row-2 card-col-3";
+        align-items: center;
+    }
+
+    .card-col-1 {
+        grid-area: card-col-1;
+    }
+
+    .card-col-2-row-1 {
+        grid-area: card-col-2-row-1;
+    }
+
+    .card-col-2-row-2 {
+        grid-area: card-col-2-row-2;
+    }
+
+    .card-col-3 {
+        grid-area: card-col-3;
+    }
+}
+
+/* card */
+
+.card-col-1 {
+    border-top: 5px solid var(--clr-cyan);
+}
+
+.card-col-2-row-1 {
+    border-top: 5px solid var(--clr-red);
+}
+
+.card-col-2-row-2 {
+    border-top: 5px solid var(--clr-orange);
+}
+
+.card-col-3 {
+    border-top: 5px solid var(--clr-blue);
+}
+
+.card-img-supervisor {
+    background: url(images/icon-supervisor.svg);
+}
+
+.card-img-team-builder {
+    background: url(images/icon-team-builder.svg);
+}
+
+.card-img-karma {
+    background: url(images/icon-karma.svg);
+}
+
+.card-img-calculator {
+    background: url(images/icon-calculator.svg);
+}
+
+.card-img {
+    padding-top: 2.5rem;
+    background-origin: content-box;
+    height: 7rem;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+@media only screen and (min-width: 1000px) {
+    .card-img {
+        padding-top: 3.5rem;
+        height: 8rem;
+    }
+}
+
+/* footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution {
+    /* padding: 1rem; */
+    font-size: 1rem;
+    text-align: center;
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* margin-top: auto; */
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
