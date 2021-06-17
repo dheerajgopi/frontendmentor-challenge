@@ -17,10 +17,97 @@ html, body {
     margin: 0;
 }
 
+/* basic layout */
+
+body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    height: 100%;
+    max-width: 25rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.9fr 1.7fr;
+    grid-template-areas:
+      "logo"
+      "hero"
+      "subscription-form";
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.hero {
+    grid-area: hero;
+}
+
+.subscription-form {
+    grid-area: subscription-form;
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.4fr 1.6fr;
+        grid-template-areas:
+          "logo hero"
+          "subscription-form hero";
+        max-width: none;
+    }
+
+    .logo {
+        grid-area: logo;
+    }
+
+    .subscription-form {
+        grid-area: subscription-form;
+    }
+
+    .hero {
+        grid-area: hero;
+    }
+}
+
+/* images */
+
+.hero {
+    background: url(images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+
+@media only screen and (min-width: 1000px) {
+    .hero {
+        background: url(images/hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+}
+
+.logo {
+    background: url(images/logo.svg);
+    background-repeat: no-repeat;
+}
+
 /* footer */
 
+footer {
+    /* position: absolute; */
+    bottom: 0;
+}
+
 .attribution {
-    font-size: 11px;
+    font-size: 1rem;
     text-align: center;
 }
 
