@@ -255,11 +255,6 @@ main {
 
 /* footer */
 
-footer {
-    position: absolute;
-    bottom: 0;
-}
-
 .attribution {
     font-size: 1rem;
     text-align: center;
