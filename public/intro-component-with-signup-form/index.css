@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+:root {
+    --pink: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
 html, body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -16,6 +24,79 @@ html, body {
 body {
     position: relative;
     height: 100vh;
+    background: url(images/bg-intro-desktop.png), var(--pink);
+    background-size: cover;
+}
+
+main {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.2fr;
+    grid-template-areas:
+        "heading"
+        "form";
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "heading form";
+    }
+}
+
+/* heading */
+
+.heading {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-area: heading;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 1000px) {
+    .heading {
+        text-align: left;
+    }
+}
+
+/* form */
+
+.form-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    border-radius: 10px;
+    height: 3rem;
+    color: white;
+}
+
+.form {
+    grid-area: form;
+}
+
+.form-wrapper {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.claim-form input {
+    display: block;
+}
+
+.form-footer {
+    color: var(--grayish-blue);
+}
+
+.form-footer span {
+    color: var(--pink);
+    font-weight: 700;
 }
 
 /* footer */
