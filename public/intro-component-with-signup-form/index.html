@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="index.css">
+  <script defer src="index.js"></script>
 
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
@@ -24,34 +25,34 @@
       </div>
 
       <div class="form-wrapper">
-        <form class="claim-form">
+        <form class="claim-form" novalidate>
           <div class="form-item">
             <div class="input-wrapper">
-              <input type="text" name="fname" id="fname" placeholder="First Name">
-              <img src="images/icon-error.svg" alt="error icon" class="error-icon">
+              <input type="text" name="fname" id="fname" placeholder="First Name" class="form-input">
+              <img src="images/icon-error.svg" alt="error icon" class="error-icon" id="error-icon-fname">
             </div>
-            <!-- <small id="error-msg-fname">a</small> -->
+            <small id="error-msg-fname" class="error-msg">First Name cannot be empty</small>
           </div>
           <div class="form-item">
             <div class="input-wrapper">
-              <input type="text" name="lname" id="lname" placeholder="Last Name">
-              <img src="images/icon-error.svg" alt="error icon" class="error-icon">
+              <input type="text" name="lname" id="lname" placeholder="Last Name" class="form-input">
+              <img src="images/icon-error.svg" alt="error icon" class="error-icon" id="error-icon-lname">
             </div>
-            <!-- <small id="error-msg-lname">b</small> -->
+            <small id="error-msg-lname" class="error-msg">Last Name cannot be empty</small>
           </div>
           <div class="form-item">
             <div class="input-wrapper">
-              <input type="email" name="email" id="email" placeholder="Email Address">
-              <img src="images/icon-error.svg" alt="error icon" class="error-icon">
+              <input type="email" name="email" id="email" placeholder="Email Address" class="form-input">
+              <img src="images/icon-error.svg" alt="error icon" class="error-icon" id="error-icon-email">
             </div>
-            <!-- <small id="error-msg-email">c</small> -->
+            <small id="error-msg-email" class="error-msg">Looks like this is not an email</small>
           </div>
           <div class="form-item">
             <div class="input-wrapper">
-              <input type="password" name="pswd" id="pswd" placeholder="Password">
-              <img src="images/icon-error.svg" alt="error icon" class="error-icon">
+              <input type="password" name="pswd" id="pswd" placeholder="Password" class="form-input">
+              <img src="images/icon-error.svg" alt="error icon" class="error-icon" id="error-icon-pswd">
             </div>
-            <!-- <small id="error-msg-pswd">d</small> -->
+            <small id="error-msg-pswd" class="error-msg">Password cannot be empty</small>
           </div>
           <input type="submit" value="Claim your free trial" id="submit">
         </form>

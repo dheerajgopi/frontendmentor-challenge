@@ -35,6 +35,10 @@ html, body {
     margin: 0;
 }
 
+.clr-red {
+    color: red;
+}
+
 /* basic layout */
 
 body {
@@ -206,6 +210,12 @@ main {
 
 small {
     font-size: 0.7rem;
+}
+
+.error-msg {
+    text-align: right;
+    color: red;
+    font-style: italic;
 }
 
 #error-msg-fname, #error-msg-lname, #error-msg-email, #error-msg-pswd {
