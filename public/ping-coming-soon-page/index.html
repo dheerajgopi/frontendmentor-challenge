@@ -6,26 +6,36 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css">
 
   <title>Frontend Mentor | Ping coming soon page</title>
 </head>
 <body>
+  <main>
+    <div class="title-form">
+      <img src="images/logo.svg" alt="logo" id="logo">
+      <h1 class="main-heading">We are launching <span>soon!</span></h1>
 
-  <h1>We are launching soon!</h1>
+      <h2 class="sub-heading">Subscribe and get notified</h2>
 
-  <h2>Subscribe and get notified</h2>
+      <form novalidate class="notify-form">
+        <input type="email" name="email" id="input-email" placeholder="Your email address...">
+        <input type="submit" value="Notify Me" id="input-submit">
+      </form>
+    </div>
 
-  <form novalidate>
-    <input type="email" name="email" id="email">
-    <input type="submit" value="Notify Me" id="submit">
-  </form>
+    <div class="illustration"></div>
 
-  <footer>
-    <p>&copy; Copyright Ping. All rights reserved.</p>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/dheerajgopi" target="_blank">Dheeraj Gopinath</a>.
-    </p>
-  </footer>
+    <i class="fab fa-facebook-f">f</i>
+
+    <footer>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/dheerajgopi" target="_blank">Dheeraj Gopinath</a>.
+      </p>
+    </footer>
+  </main>
+
 </body>
 </html>

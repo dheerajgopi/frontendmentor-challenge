@@ -14,12 +14,145 @@
     margin: 0;
 }
 
+/* main content */
+
 html, body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 20px;
 }
 
+.main-heading {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: gray;
+    padding-top: 2rem;
+}
+
+.main-heading > span {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+}
+
+.sub-heading {
+    font-size: .65rem;
+    font-weight: 600;
+    color: darkslategray;
+    padding-top: 0.5rem;
+}
+
+body {
+    position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex: 1 100%;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.title-form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 4.5rem;
+}
+
+#logo {
+    width: 3rem;
+    height: auto;
+}
+
+.notify-form {
+    padding-top: 1.5rem;
+}
+
+#input-email {
+    border-radius: 50vh;
+    height: 2rem;
+    width: 15rem;
+    border-width: 1px;
+    border-color: var(--gray);
+    padding-left: 1rem;
+}
+
+#input-submit {
+    margin-top: 0.5rem;
+    border-radius: 50vh;
+    height: 2rem;
+    width: 15rem;
+    display: block;
+    border: none;
+    background-color: var(--blue);
+    color: white;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 1000px) {
+    .title-form {
+        padding-top: 4rem;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    .sub-heading {
+        font-size: 0.85rem;
+    }
+
+    #logo {
+        width: 4rem;
+        height: auto;
+    }
+
+    #input-email {
+        width: 17rem;
+    }
+
+    #input-submit {
+        padding-top: 0;
+        display: inline-block;
+        width: 8rem;
+    }
+}
+
+/* images */
+
+.illustration {
+    padding-top: 5rem;
+    width: 16rem;
+    height: 15rem;
+    background: url(images/illustration-dashboard.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+}
+
+.fa-facebook-f {
+    width: 5rem;
+    height: 5rem;
+    color: gray;
+}
+
+@media only screen and (min-width: 1000px) {
+    .illustration {
+        padding-top: 3.5rem;
+        width: 24.5rem;
+        height: 18.5rem;
+    }
+}
+
 /* footer */
+
+footer {
+    margin-top: auto;
+}
 
 .attribution {
     font-size: 11px;
