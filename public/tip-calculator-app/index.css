@@ -44,15 +44,38 @@ main {
 }
 
 #app {
+    display: flex;
+    flex-flow: column nowrap;
     background-color: var(--white);
     border-radius: 1rem 1rem 0 0;
     flex-grow: 1;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+}
+
+.app-section {
+    flex-grow: 1;
+    flex-basis: 50%;
+    border-radius: 0.5rem;
+}
+
+#calculator {
+    background-color: white;
+}
+
+#summary {
+    background-color: var(--clr-very-dark-cyan);
 }
 
 @media only screen and (min-width: 1000px) {
     main {
         margin-top: -1rem;
         padding-bottom: 1.5rem;
+    }
+
+    #app {
+        flex-flow: row nowrap;
     }
 
     #heading {
@@ -72,6 +95,74 @@ main {
         max-width: 960px;
         flex-grow: 0;
     }
+
+    #calculator {
+        margin: 0 0.5rem 0 0;
+    }
+
+    #summary {
+        margin: 0 0 0 0.5rem;
+    }
+}
+
+/* tip selection */
+
+.calc-section input[type="radio"] {
+    opacity: 0;
+    width: 0;
+}
+
+.calc-section .tip-label {
+    display: inline-flex;
+    background-color: var(--clr-very-dark-cyan);
+    color: var(--white);
+    font-weight: 700;
+    width: 100%;
+    max-height: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: .2rem;
+}
+
+#input-tip-custom {
+    background-color: var(--light-grayish-cyan-84);
+    border: none;
+    color: var(--clr-very-dark-cyan);
+    font-size: 1rem;
+}
+
+#input-tip-custom::placeholder {
+    text-align: right;
+    color: var(--dark-grayish-cyan-43);
+}
+
+.calc-section input[type="radio"]:checked + label {
+    background-color: var(--strong-cyan);
+    color: var(--clr-very-dark-cyan);
+}
+
+.calc-section input[type="radio"]:hover + label {
+    background-color: var(--strong-cyan);
+    color: var(--clr-very-dark-cyan);
+}
+
+.calc-section input[type="radio"]:focus + label {
+    background-color: var(--strong-cyan);
+    color: var(--clr-very-dark-cyan);
+}
+
+.tip-selection-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    height: 100%;
+}
+
+.tip-item {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
 }
 
 /* footer */
